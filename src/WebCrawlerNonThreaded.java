@@ -51,6 +51,10 @@ public class WebCrawlerNonThreaded {
         }
     }
 
+    public int getNumberOfUrl(){
+        return visitedUrls.size();
+    }
+
     private void parseAndAddUrls(String rawHtml, int depth) {
         String urlPattern = "((\\/wiki\\/)+[^\\s\\.\\#\\:\"]+[\\w])\"";
         Pattern pattern = Pattern.compile(urlPattern);
